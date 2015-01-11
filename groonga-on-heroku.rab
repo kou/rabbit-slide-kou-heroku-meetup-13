@@ -1,0 +1,109 @@
+= HerokuでGroonga
+
+: author
+   須藤功平
+: institution
+   クリアコード
+: content-source
+   Heroku Meetup #13 新年会
+: date
+   2015-01-13
+: allotted-time
+   5m
+: theme
+   groonga
+
+= Groonga（ぐるんが）
+
+Herokuで使える\n
+全文検索\n
+エンジン
+
+= 特徴1
+
+追加プラグイン\n
+なしで\n
+日本語対応
+
+= 特徴2
+
+組み込める\n
+↓\n
+SQLite3並に\n
+お手軽
+
+= 特徴3
+
+サーバーにも\n
+なる\n
+↓\n
+大規模でも\n
+使える
+
+= 大規模
+
+  * livedoor Blog\n
+    (('note:http://www.slideshare.net/kazeburo/mroonga-in-ablogservice'))
+  * Yahoo! Japan社内\n
+    (('note:「全文検索エンジンGroongaを囲む夕べ5」で紹介'))
+  * ぐるなび\n
+    (('note:「全文検索エンジンGroongaを囲む夕べ5」で紹介'))
+
+= Herokuで使う
+
+ビルドパックを指定
+
+  % heroku create --buildpack https://.../groonga.tgz
+
+(('note:詳細：https://github.com/groonga/heroku-buildpack-groonga'))
+
+= Railsで使う
+
+ビルドパックを指定
+
+  % heroku create --buildpack https://.../rroonga.tgz
+
+(('note:詳細：https://github.com/groonga/heroku-buildpack-rroonga'))
+
+= Groongaを使うと…
+
+  * 日本語全文検索対応\n
+    Railsアプリになる！
+    * 追加プラグインなし
+    * 別サーバーも必要なし
+    * 参考：PostgreSQLもMySQLも\n
+      追加プラグインが必要
+
+= 普通と違うところ
+
+Groonga DBはローカル(('note:（SQLite3と同じ）'))
+  * dynoが死ぬと消える
+  * dynoを作るときに毎回作る
+
+(('tag:center'))
+↓
+
+Disposable Database
+  * Groongaは更新が速いから\n
+    できる
+
+= 起動の流れ：通常
+
+  # image
+  # src = images/normal-boot-flow.svg
+  # relative_height = 100
+
+= 起動の流れ：Groonga入り
+
+  # image
+  # src = images/groonga-boot-flow.svg
+  # relative_height = 100
+
+= サンプル
+
+  * デモ
+    * (('note:http://rroonga-blog.herokuapp.com/'))
+  * ソース
+    * (('note:https://github.com/groonga/heroku-sample-rroonga-blog'))
+  * 解説
+    * (('note:http://www.clear-code.com/blog/2014/5/28.html'))
