@@ -107,3 +107,14 @@ Disposable Database
     * (('note:https://github.com/groonga/heroku-sample-rroonga-blog'))
   * 解説
     * (('note:http://www.clear-code.com/blog/2014/5/28.html'))
+
+= アプリ例：Try Groonga
+
+(('tag:center'))
+Webブラウザー上で\n
+Groongaを試せるHerokuアプリ
+
+  * デモ
+    * (('note:http://try-groonga.herokuapp.com/'))
+  * ソース
+    * (('note:https://github.com/groonga/heroku-try-groonga'))
