@@ -69,7 +69,7 @@ SQLite3並に\n
 
   * 日本語全文検索対応\n
     Railsアプリになる！
-    * 追加Herokuプラグインなし
+    * 追加Herokuアドオンなし
     * 別サーバーも必要なし
     * 参考：PostgreSQLもMySQLも\n
       追加プラグインが必要
